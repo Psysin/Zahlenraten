@@ -1,8 +1,20 @@
 ### julia.goes.dev CHALLENGE Monat 1 ###
 import random
 
+
+# Fuctions
+def check_guess(user_number, secret_number):
+    if user_number == secret_number:
+        return "correct"
+    elif user_number > secret_number:
+        return "too_high"
+    elif user_number < secret_number:
+        return "too_low"
+
+
 secret_number = random.randint(0, 100)
 attempts = 0
+
 print("Welcome to Secret Number!")
 
 while True:
@@ -20,6 +32,9 @@ while True:
 
     user_number = int(user_number)
     attempts += 1
+
+    result = check_guess(user_number, secret_number)
+    print(result)
 
     if user_number == secret_number:
         print(f"Correct! You needed {attempts} attempts.")
