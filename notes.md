@@ -6,3 +6,5 @@ continue bricht nur den aktuellen Schleifendurchlauf ab und springt direkt zum n
 
 # Was macht isdigit()
 isdigit() prüft, ob ein String nur aus Ziffern besteht. Zum Beispiel "42". Negative Zahlen wie "-1" zählen nicht als digit.
+
+
