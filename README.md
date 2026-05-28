@@ -18,7 +18,7 @@ Aktuell gibt es nur die Terminal Version.
 - GUI und Umsetzung mit PyGame
 
 ## Starten
-Python 3.x ist Vorraussetzung
+Python 3.x ist Voraussetzung
 ```bash
 python terminal-version/main.py
 ```

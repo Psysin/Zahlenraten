@@ -20,34 +20,41 @@ def is_valid_number(user_number):
     return True
 
 
-secret_number = random.randint(0, 100)
-attempts = 0
+# Startet das Spiel
+def play_game():
+    secret_number = random.randint(0, 100)
+    attempts = 0
 
-print("Welcome to Secret Number!")
+    print("Welcome to Secret Number!")
 
-### Gameloop ###
-while True:
-    user_number = input("Please enter a number between 0 and 100 or quit for exit: ")
+    ### Gameloop ###
+    while True:
+        user_number = input(
+            "Please enter a number between 0 and 100 or quit for exit: "
+        )
 
-    if user_number == "quit":
-        break
-    elif not is_valid_number(user_number):
-        continue
+        if user_number == "quit":
+            break
+        elif not is_valid_number(user_number):
+            continue
 
-    # Convert input string to integer.
-    user_number = int(user_number)
-    # Erhöt um 1 pro Durchlauf
-    attempts += 1
+        # Convert input string to integer.
+        user_number = int(user_number)
+        # Erhöt um 1 pro Durchlauf
+        attempts += 1
 
-    # Holt das Ergebnis aus der Funktion check_guess.
-    result = check_guess(user_number, secret_number)
+        # Holt das Ergebnis aus der Funktion check_guess.
+        result = check_guess(user_number, secret_number)
 
-    if result == "correct":
-        print(f"Correct! You needed {attempts} attempts.")
-        break
-    elif result == "too_low":
-        print("Your number is too low.")
-    elif result == "too_high":
-        print("Your number is too high")
+        if result == "correct":
+            print(f"Correct! You needed {attempts} attempts.")
+            break
+        elif result == "too_low":
+            print("Your number is too low.")
+        elif result == "too_high":
+            print("Your number is too high")
 
-print("Program closed")
+    print("Program closed")
+
+
+play_game()
