@@ -6,11 +6,11 @@ Ziel ist die geheime Nummer zu erraten.
 Aktuell gibt es nur die Terminal Version.
 
 ## Funktionen
-- Zufallszahl zwischen 1 und 100
+- Zufallszahl zwischen 0 und 100
 - Eingabe über das Terminal
 - Hinweise zu niedrig, zu hoch oder korrekt
 - Versuchszähler
-- Spiel beenden mit 'quit'
+- Spiel beenden mit `quit`
 
 ## Geplant
 - Wählbarer Schwierigkeitsgrad
@@ -21,4 +21,4 @@ Aktuell gibt es nur die Terminal Version.
 Python 3.x ist Vorraussetzung
 ```bash
 python terminal-version/main.py
-
+```
